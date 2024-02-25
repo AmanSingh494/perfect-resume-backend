@@ -1,0 +1,11 @@
+{
+  "name": "perfect-resume-backend",
+  "version": "1.0.0",
+  "description": "Backend for perfect-resume web app that builds your perfect resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aman Singh",
+  "license": "ISC"
+}
