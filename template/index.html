@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20vh;
+            width: 100vw;
+            z-index: -1;
+            opacity: 0.5;
+            background-color: lightpink;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .div1 {
+            background-color: #404040;
+            color: white;
+            height: 100vh;
+            width: 20vw;
+            padding: 2rem;
+        }
+
+        .div2 {
+            padding: 2rem;
+            /* background-color: green; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div1">
+            <div class="links">
+
+                {{#each contactLinks}}
+                <li>{{this}} </li>
+                {{/each}}
+            </div>
+            <div class="qualifications">
+                {{#each qualifications}}
+                <li>{{this}} </li>
+                {{/each}}
+            </div>
+            <div class="education">
+                {{#each education}}
+                <li>{{this}} </li>
+                {{/each}}
+            </div>
+        </div>
+        <div class="div2">
+
+            <h1>{{name}}</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
