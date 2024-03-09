@@ -8,7 +8,6 @@ const createTemplate = (file, data) => {
   const template = handleBars.compile(source())
 
   const html = template(data)
-  console.log(html)
   return html
 }
 module.exports = createTemplate
