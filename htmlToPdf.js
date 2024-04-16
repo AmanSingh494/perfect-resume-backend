@@ -15,7 +15,7 @@ const htmlToPdf = async (template) => {
   await page.waitForSelector('body')
   // Configure PDF generation options (optional)
   const pdfOptions = {
-    // format: 'A4', // Change format if needed (e.g., 'Letter')
+    format: 'A4', // Change format if needed (e.g., 'Letter')
 
     printBackground: true
   }
