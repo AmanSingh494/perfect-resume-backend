@@ -99,7 +99,7 @@ Handlebars.registerHelper('generateWorkItem', (item) => {
                 </div>
     `
 })
-Handlebars.registerHelper('check_work_empty', (arr) => {
+Handlebars.registerHelper('check_work_empty', (arr, name) => {
   if (Object.keys(arr[0]).length === 0) {
     return
   } else {
@@ -110,7 +110,7 @@ Handlebars.registerHelper('check_work_empty', (arr) => {
 
     return `
     <div class="work">
-            <p class="font-medium titillium-web-semibold"> Work Experience</p>
+            <p class="font-medium titillium-web-semibold"> ${name}</p>
             <div class="black-div"></div>
             <div class="all-lists font-small">
                 ${workItemsHtml}

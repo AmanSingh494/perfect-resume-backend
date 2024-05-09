@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 app.use(bodyParser.json()) // for parsing data to json
-app.use(cors({ origin: 'http://localhost:3000' }))
+app.use(cors({ origin: 'https://perfect-resume.onrender.com' }))
 
 let imagePath = ''
 // post request
