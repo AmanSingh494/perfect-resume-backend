@@ -5,7 +5,10 @@ const puppeteer = require('puppeteer')
 //setting up puppeeter
 const htmlToPdf = async (template) => {
   // launching a headless chrome browser
-  const browser = await puppeteer.launch({ headless: true })
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  })
   // Create a new page
   const page = await browser.newPage()
   // setting up html page
