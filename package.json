@@ -4,7 +4,8 @@
   "description": "Backend for perfect-resume web app that builds your perfect resume",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Aman Singh",
   "license": "ISC",

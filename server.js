@@ -72,7 +72,7 @@ app.post('/submit', async (req, res) => {
       linktree,
       imagePath
     })
-    // console.log(template)
+    console.log('Request received')
     const pdfBuffer = await htmlToPdf(template)
     res.contentType('application/pdf')
     res.setHeader('Content-Disposition', 'attachment; filename=resume.pdf')
