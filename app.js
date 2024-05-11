@@ -23,6 +23,7 @@ const upload = multer({ storage: storage })
 app.use(bodyParser.json()) // for parsing data to json
 app.use(cors({ origin: 'https://perfect-resume-sigma.vercel.app' }))
 
+const PORT = process.env.PORT || 5000
 let imagePath = ''
 // post request
 app.post('/submit', async (req, res) => {
@@ -95,6 +96,6 @@ app.post('/upload', upload.single('image'), async (req, res) => {
     res.status(500).send('Error uploading image')
   }
 })
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log('Server is running on port 5000')
 })
