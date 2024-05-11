@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
     cb(null, file.originalname)
   }
 })
-
+require('dotenv').config()
 const upload = multer({ storage: storage })
 app.use(bodyParser.json()) // for parsing data to json
 app.use(cors({ origin: 'https://perfect-resume-sigma.vercel.app' }))
