@@ -3,4 +3,4 @@ services:
   name: perfect-resume-backend  
   env: node
   buildCommand: npm install && npx playwright install
-  startCommand: npm start
+  startCommand: node app.js
