@@ -1,13 +1,22 @@
 const fs = require('fs')
 //puppeteer
 const puppeteer = require('puppeteer')
-
+require('dotenv').config()
 //setting up puppeeter
 const htmlToPdf = async (template) => {
   // launching a headless chrome browser
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--single-process',
+      '--no-zygote'
+    ],
+    executablePath:
+      process.env.node === 'production'
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath()
   })
   // Create a new page
   const page = await browser.newPage()
