@@ -3,13 +3,13 @@ const app = express()
 const bodyParser = require('body-parser')
 const Handlebars = require('handlebars')
 const cors = require('cors')
+const htmlToPdf = require('./htmlToPdf')
 const createTemplate = require('./template/handlebars')
 // requiring the handlebars helpers
 require('./registerHelpers')
 // setting up multer for image upload
 const path = require('path')
 const multer = require('multer')
-const generatePDF = require('./htmlToPdf')
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'images/')
@@ -74,7 +74,7 @@ app.post('/submit', async (req, res) => {
       imagePath
     })
     console.log('Request received')
-    const pdfBuffer = await generatePDF(template)
+    const pdfBuffer = await htmlToPdf(template)
     res.contentType('application/pdf')
     res.setHeader('Content-Disposition', 'attachment; filename=resume.pdf')
     res.send(pdfBuffer)
