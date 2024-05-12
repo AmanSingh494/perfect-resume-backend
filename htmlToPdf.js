@@ -33,8 +33,6 @@ const htmlToPdf = async (template) => {
   }
   // Generate the PDF
   const pdfBuffer = await page.pdf(pdfOptions)
-  // Write the PDF to a file (optional)
-  fs.writeFileSync('output.pdf', pdfBuffer)
 
   // Close the browser
   await browser.close()
