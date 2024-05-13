@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 require('dotenv').config()
 const upload = multer({ storage: storage })
 app.use(bodyParser.json()) // for parsing data to json
-app.use(cors({ origin: 'https://perfect-resume-sigma.vercel.app' }))
+app.use(cors({ origin: process.env.CORS_ORIGIN }))
 
 const PORT = process.env.PORT || 5000
 let imagePath = ''
