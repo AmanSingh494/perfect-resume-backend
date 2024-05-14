@@ -18,16 +18,24 @@ Handlebars.registerHelper('generateEducationItem', (item) => {
         </div>
     `
 })
+
 Handlebars.registerHelper('check_edu_empty', (arr) => {
   if (Object.keys(arr[0]).length === 0) {
     return
-  } else {
-    let educationItemsHtml = ''
-    for (let item of arr) {
-      educationItemsHtml += Handlebars.helpers.generateEducationItem(item)
+  }
+  const firstObject = arr[0]
+  for (let key in firstObject) {
+    if (firstObject[key] === '') {
+      return
     }
+  }
 
-    return `
+  let educationItemsHtml = ''
+  for (let item of arr) {
+    educationItemsHtml += Handlebars.helpers.generateEducationItem(item)
+  }
+
+  return `
             <div class="education-section">
                 <p class="font-medium titillium-web-semibold">Education</p>
                 <div class="education">
@@ -49,7 +57,6 @@ Handlebars.registerHelper('check_edu_empty', (arr) => {
                 </div>
             </div>
         `
-  }
 })
 
 Handlebars.registerHelper('generateCourseItem', (item) => {
@@ -65,16 +72,24 @@ Handlebars.registerHelper('generateCourseItem', (item) => {
 </div>
     `
 })
+
 Handlebars.registerHelper('check_course_empty', (arr) => {
   if (Object.keys(arr[0]).length === 0) {
     return
-  } else {
-    let courseItemsHtml = ''
-    for (let item of arr) {
-      courseItemsHtml += Handlebars.helpers.generateCourseItem(item)
+  }
+  const firstObject = arr[0]
+  for (let key in firstObject) {
+    if (firstObject[key] === '') {
+      return
     }
+  }
 
-    return `
+  let courseItemsHtml = ''
+  for (let item of arr) {
+    courseItemsHtml += Handlebars.helpers.generateCourseItem(item)
+  }
+
+  return `
     <div class="courses">
     <p class="font-medium titillium-web-semibold">Additional Qualifications and Courses</p>
     <div class="black-div"></div>
@@ -83,8 +98,8 @@ Handlebars.registerHelper('check_course_empty', (arr) => {
     </div>
 </div>
         `
-  }
 })
+
 Handlebars.registerHelper('generateWorkItem', (item) => {
   return `
   <div class="list"> 
@@ -99,16 +114,24 @@ Handlebars.registerHelper('generateWorkItem', (item) => {
                 </div>
     `
 })
+
 Handlebars.registerHelper('check_work_empty', (arr, name) => {
   if (Object.keys(arr[0]).length === 0) {
     return
-  } else {
-    let workItemsHtml = ''
-    for (let item of arr) {
-      workItemsHtml += Handlebars.helpers.generateWorkItem(item)
+  }
+  const firstObject = arr[0]
+  for (let key in firstObject) {
+    if (firstObject[key] === '') {
+      return
     }
+  }
 
-    return `
+  let workItemsHtml = ''
+  for (let item of arr) {
+    workItemsHtml += Handlebars.helpers.generateWorkItem(item)
+  }
+
+  return `
     <div class="work">
             <p class="font-medium titillium-web-semibold"> ${name}</p>
             <div class="black-div"></div>
@@ -117,8 +140,8 @@ Handlebars.registerHelper('check_work_empty', (arr, name) => {
             </div>
         </div>
         `
-  }
 })
+
 Handlebars.registerHelper('generateAchievementsItem', (item) => {
   return `
   <div class="list">
@@ -131,16 +154,24 @@ Handlebars.registerHelper('generateAchievementsItem', (item) => {
 </div>
     `
 })
+
 Handlebars.registerHelper('check_achievements_empty', (arr) => {
   if (Object.keys(arr[0]).length === 0) {
     return
-  } else {
-    let achievementsItemsHtml = ''
-    for (let item of arr) {
-      achievementsItemsHtml += Handlebars.helpers.generateAchievementsItem(item)
+  }
+  const firstObject = arr[0]
+  for (let key in firstObject) {
+    if (firstObject[key] === '') {
+      return
     }
+  }
 
-    return `
+  let achievementsItemsHtml = ''
+  for (let item of arr) {
+    achievementsItemsHtml += Handlebars.helpers.generateAchievementsItem(item)
+  }
+
+  return `
     <div class="achievements">
             <p class="font-medium titillium-web-semibold">Awards / Achievements</p>
             <div class="black-div"></div>
@@ -149,23 +180,31 @@ Handlebars.registerHelper('check_achievements_empty', (arr) => {
             </div>
         </div>
         `
-  }
 })
+
 Handlebars.registerHelper('generateSkillItem', (item) => {
   return `
   <li><span class="titillium-web-semibold">${item.skill}</span><span> - ${item.level}</span></li>
     `
 })
+
 Handlebars.registerHelper('check_skill_empty', (arr) => {
   if (Object.keys(arr[0]).length === 0) {
     return
-  } else {
-    let itemsHtml = ''
-    for (let item of arr) {
-      itemsHtml += Handlebars.helpers.generateSkillItem(item)
+  }
+  const firstObject = arr[0]
+  for (let key in firstObject) {
+    if (firstObject[key] === '') {
+      return
     }
+  }
 
-    return `
+  let itemsHtml = ''
+  for (let item of arr) {
+    itemsHtml += Handlebars.helpers.generateSkillItem(item)
+  }
+
+  return `
     <div class="skills">
             <p class="font-medium titillium-web-semibold">Skills</p>
             <div class="black-div"></div>
@@ -176,5 +215,4 @@ Handlebars.registerHelper('check_skill_empty', (arr) => {
             </div>
         </div>
         `
-  }
 })
