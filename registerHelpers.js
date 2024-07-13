@@ -60,6 +60,10 @@ Handlebars.registerHelper('check_edu_empty', (arr) => {
 })
 
 Handlebars.registerHelper('generateCourseItem', (item) => {
+  let experience = ''
+  for (let x of item.exp) {
+    experience += `<li>${x}</li>`
+  }
   return `
   <div class="list">
   <div class="list-heading titillium-web-semibold">
@@ -67,7 +71,7 @@ Handlebars.registerHelper('generateCourseItem', (item) => {
       <p>${item.duration}</p>
   </div>
   <div class="indented-list">
-      <li>${item.exp}</li>
+      ${experience}
   </div>
 </div>
     `
@@ -101,6 +105,10 @@ Handlebars.registerHelper('check_course_empty', (arr) => {
 })
 
 Handlebars.registerHelper('generateWorkItem', (item) => {
+  let experience = ''
+  for (let x of item.exp) {
+    experience += `<li>${x}</li>`
+  }
   return `
   <div class="list"> 
                     <div class="list-heading titillium-web-semibold">
@@ -109,7 +117,7 @@ Handlebars.registerHelper('generateWorkItem', (item) => {
                     </div>
                     <div class="indented-list">
                         <li>Worked as ${item.position}</li>
-                        <li>${item.exp}</li>
+                        ${experience}
                     </div>
                 </div>
     `

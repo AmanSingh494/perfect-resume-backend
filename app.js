@@ -37,8 +37,9 @@ app.post('/submit', async (req, res) => {
       projects,
       work,
       links,
-      image
+      templateName
     } = req.body
+    console.log(req.body)
     // console.log(
     //   name,
     //   email,
@@ -53,10 +54,10 @@ app.post('/submit', async (req, res) => {
     //   imagePath
     // )
     const { name, email, phone, address, dob, about, linktree } =
-      personalDetails[0]
+      personalDetails
 
     // html template
-    const template = createTemplate('temp1', {
+    const template = createTemplate(templateName, {
       name,
       email,
       phone,
@@ -73,6 +74,7 @@ app.post('/submit', async (req, res) => {
       linktree,
       imagePath
     })
+    console.log(template)
     console.log('Request received')
     const pdfBuffer = await htmlToPdf(template)
     res.contentType('application/pdf')

@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Document </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <style>
         * {
             margin: 0;
@@ -20,15 +18,16 @@
         }
 
         :root {
-            --primary-color: #494747;
-            --secondary-color: #040404;
-            --font-primary: sans-serif;
-            --font-large: 2.5rem;
+            --font-large: 2rem;
             --font-medium: 1.25rem;
             --font-small: 0.85rem;
             --font-ex-small: 0.7rem;
             --font-bold: 700;
             --font-light: lighter;
+        }
+
+        body {
+            margin: 30px;
         }
 
         /* utilities */
@@ -63,97 +62,46 @@
             width: auto;
         }
 
-
-        body {
-            display: flex;
-            justify-content: space-between;
-            font-family: var(--font-primary);
-            height: 1050px;
-        }
-
-        body::before {
-            content: "";
-            position: absolute;
-            top: 26px;
-            left: 0;
-            height: 10rem;
-            width: 100vw;
-            z-index: -1;
-            opacity: 0.5;
-            background-color: lightpink;
-        }
-
-        .white-div {
-            background-color: white;
-            height: 2px;
-            width: 100%;
-        }
-
-        .container {
-            display: flex;
-            width: 100vw;
-        }
-
-        .div1 {
+        .main {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--primary-color);
-            color: white;
-            width: 13rem;
-            padding: 1rem;
-            margin: 0 0 0 40px;
             gap: 10px;
         }
 
-        .div2 {
-            padding: 0 2rem;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+
+        .header-details {
+            display: flex;
+            gap: 5px;
+        }
+
+        .all-lists {
             display: flex;
             flex-direction: column;
-            width: 70vw;
-            gap: 1rem;
+            margin: 5px 0;
         }
 
-        .name {
-            padding: 5rem 0;
-            font-family: sans-serif;
-        }
 
-        .about {
+        .list-heading {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .skills {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-content: center;
-            height: 250px;
-            align-self: flex-start;
-            width: 100%;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .skill-item {
-            display: flex;
-            border-radius: 5px;
             justify-content: space-between;
         }
 
+        .indented-list {
+            margin-left: 30px;
+        }
+
+        /* education */
         .education-section {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            height: 250px;
+            gap: 5px;
         }
 
         .education {
@@ -174,74 +122,6 @@
             border: 1px solid #000;
             padding: 10px;
             text-align: center;
-        }
-
-        .qualifications {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            height: 250px;
-            justify-content: center;
-        }
-
-        .qualification-list {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .qualification-item {
-            border-radius: 5px;
-        }
-
-        .contacts {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            height: 250px;
-            justify-content: center;
-        }
-
-        .contact-list {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-            border-radius: 5px;
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            overflow: hidden;
-            border-radius: 50%;
-        }
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .work-history {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-top: 1rem;
-        }
-
-        .work-about {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .work-item {
-            border-radius: 5px;
         }
 
         .titillium-web-light {
@@ -273,221 +153,346 @@
             font-weight: 900;
             font-style: normal;
         }
-
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24;
-            font-size: var(--font-small);
-        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="div1">
-            <div class="profile-photo">
-                <img src="https://a.storyblok.com/f/191576/1200x800/a3640fdc4c/profile_picture_maker_before.webp"
-                    alt="Profile Photo">
+    <div class="main">
+        <div class="header">
+            <div>
+                <p class="titillium-web-semibold font-large">Aman Singh</p>
             </div>
-            <div class="white-div"></div>
-            <div class="contacts">
-                <p class="font-medium font-bold">Contact</p>
-                <div class="contact-list font-ex-small">
-                    <div class="contact-item">
-                        <span class="material-symbols-outlined">
-                            mail
-                        </span>
-                        <p>anjanirathore16@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <span class="material-symbols-outlined">
-                            call
-                        </span>
-                        <p>09717599515</p>
-                    </div>
-                    <div class="contact-item">
-                        <span class="material-symbols-outlined">
-                            home
-                        </span>
-                        <p>B -475 b Patel Nagar 2nd</p>
-                    </div>
-                </div>
+            <div class="header-details font-small">
+                <p><span class="font-bold">DOB:</span> 2024-06-13</p> |
+                <p><span class="font-bold">Email:</span> <a
+                        href="mailto:amanforwork1@gmail.com">amanforwork1@gmail.com</a> </p> |
+                <p><span class="font-bold">Phone:</span> 09717599515 </p>
+                |
+                <a href="DFVZSDV SDDSV">My LinkTree</a>
             </div>
-            <div class="white-div"></div>
-
-            <div class="skills">
-                <p class="font-medium font-bold">Skills</p>
-                <div class="skill-list">
-                    <div class="skill-item">
-                        <p class="font-small">React JS </p>
-                        <p class="font-small">Intermediate </p>
-                    </div>
-                    <div class="skill-item">
-                        <p class="font-small">Blockchain </p>
-                        <p class="font-small">Beginner </p>
-                    </div>
-                    <div class="skill-item">
-                        <p class="font-small">Node JS</p>
-                        <p class="font-small">Intermediate </p>
-                    </div>
-                </div>
-            </div>
-            <div class="white-div"></div>
-            <div class="qualifications">
-                <p class="font-medium font-bold">Achievements</p>
-                <div class="qualification-list">
-                    <div class="qualification-item">
-                        <p class="font-small">5 star HacckerRanker in problem solving</p>
-                    </div>
-                    <div class="qualification-item">
-                        <p class="font-small">Competed at more than 5 hackathons</p>
-                    </div>
-                    <div class="qualification-item">
-                        <p class="font-small">Solved 200 leetcode problems</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <div class="div2">
-            <div class="font-large name">
-                <p>Aman Singh</p>
-            </div>
-            <div class="about">
-                <p class="font-medium font-bold">About me</p>
-                <p class=" font-ex-small">I am a passionate software developer with experience in various programming
-                    languages and frameworks.
-                    I enjoy problem-solving and always strive to write clean, efficient code. In my spare time, I like
-                    to keep up with the latest technology trends and work on personal projects to improve my skills.</p>
-            </div>
-            <div class="black-div"></div>
-            <div class="work-history">
-                <p class="font-medium font-bold">Work History</p>
-                <div class="work-item">
-                    <!-- <h3></h3>
-                            <p></p>
-                            <p></p> -->
-                    <div class="work-about titillium-web-semibold">
-                        <p>CEO at Google</p>
-                        <p>4 years</p>
-                    </div>
-                    <li class="titillium-web-regular font-ex-small">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Obcaecati,
-                        quibusdam!</li>
-                    <li class="titillium-web-regular font-ex-small">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptas
-                        provident
-                        facilis pariatur
-                        minus? Culpa, dicta.</li>
-                </div>
-                <div class="work-item ">
-                    <!-- <h3></h3>
-                            <p></p>
-                            <p></p> -->
-                    <div class="work-about titillium-web-semibold">
-                        <p>Software Enginner at Microsoft </p>
-                        <p>3 years</p>
-                    </div>
-                    <li class="titillium-web-regular font-ex-small">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Obcaecati,
-                        quibusdam!</li>
-                    <li class="titillium-web-regular font-ex-small">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptas
-                        provident
-                        facilis pariatur
-                        minus? Culpa, dicta.</li>
-                    <li class="titillium-web-regular font-ex-small">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Alias
-                        distinctio eum
-                        illum quod
-                        cupiditate odit dolorum natus! Vel, animi vitae?</li>
-                </div>
-                <div class="work-item">
-                    <!-- <h3></h3>
-                            <p></p>
-                            <p></p> -->
-                    <p></p>
-                </div>
-
-            </div>
-            <div class="black-div"></div>
-            <div class="education-section">
-                <p class="font-medium font-bold">Education</p>
-                <div class="education">
-                    <div class="education-list font-bold">
-                        <div class="education-item">
-                            <p class="font-small">Course / Examination</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">Institution</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">Year of passing</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">Performance</p>
-                        </div>
-
-                    </div>
-                    <div class="education-list ">
-                        <div class="education-item">
-                            <p class="font-ex-small">Class 10th</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">Ch. Chhabil Dass Public School</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">2021</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">96%</p>
-                        </div>
-                    </div>
-                    <div class="education-list ">
-                        <div class="education-item">
-                            <p class="font-ex-small">Class 10th</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">Ch. Chhabil Dass Public School</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">2021</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">96%</p>
-                        </div>
-                    </div>
-                    <div class="education-list ">
-                        <div class="education-item">
-                            <p class="font-ex-small">Class 10th</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">Ch. Chhabil Dass Public School</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">2021</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-ex-small">96%</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+        <div class=" about">
+            <p class=" font-small"> bkuhajsav bjhv svhjbasnvuasio vjasvo asjvn asiuv asvkasn vasijon nascknc ashrb cascr
+                asjrc nnaslmcnas efsauf skanc asjcnA UCEAS </p>
         </div>
+
+
+        <div class="education-section">
+            <p class="font-medium titillium-web-semibold">Education</p>
+            <div class="education">
+                <div class="education-list font-bold">
+                    <div class="education-item">
+                        <p class="font-small">Course / Examination</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-small">Institution</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-small">Year of passing</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-small">Performance</p>
+                    </div>
+                </div>
+
+                <div class="education-list ">
+                    <div class="education-item">
+                        <p class="font-ex-small">GBSDRGBSZD</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">ZGVDSZGVZ</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">ZB</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">F</p>
+                    </div>
+                </div>
+
+                <div class="education-list ">
+                    <div class="education-item">
+                        <p class="font-ex-small">ZDBGGZBG</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">ZDFZ</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">ZGB</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">RZGB</p>
+                    </div>
+                </div>
+
+                <div class="education-list ">
+                    <div class="education-item">
+                        <p class="font-ex-small">ZDZBGZBGGBV</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">DFBGDTJN</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">YF,MU,</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="font-ex-small">JMD</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="work">
+            <p class="font-medium titillium-web-semibold"> Work Experience</p>
+            <div class="black-div"></div>
+            <div class="all-lists font-small">
+
+                <div class="list">
+                    <div class="list-heading titillium-web-semibold">
+                        <li>DGNZNZ</li>
+                        <p>ZDN - ZDNG ZD</p>
+                    </div>
+                    <div class="indented-list">
+                        <li>Worked as ZDGNGZDN</li>
+                        <li>GZDN GDZ</li>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="work">
+            <p class="font-medium titillium-web-semibold"> Projects / Internships</p>
+            <div class="black-div"></div>
+            <div class="all-lists font-small">
+
+                <div class="list">
+                    <div class="list-heading titillium-web-semibold">
+                        <li>DGNZ BZ</li>
+                        <p>DGN - ZGN DZ</p>
+                    </div>
+                    <div class="indented-list">
+                        <li>Worked as DZGN ZG</li>
+                        <li>N DZ</li>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <div class="list-heading titillium-web-semibold">
+                        <li>DNGDZNG</li>
+                        <p>DZN ZD - N Z</p>
+                    </div>
+                    <div class="indented-list">
+                        <li>Worked as DZN ZDN</li>
+                        <li>DNG ZDG</li>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="achievements">
+            <p class="font-medium titillium-web-semibold">Awards / Achievements</p>
+            <div class="black-div"></div>
+            <div class="all-lists font-small">
+
+                <div class="list">
+                    <div class="list-heading">
+                        <li><span class="titillium-web-semibold">ZN GZN ZZ position</span> at GNZ
+                            organised by ZNZDGNDGN</li>
+                        <p class="titillium-web-semibold">BGFNNGD</p>
+
+                    </div>
+                </div>
+
+                <div class="list">
+                    <div class="list-heading">
+                        <li><span class="titillium-web-semibold"> BSDD GS position</span> at DZHBD
+                            organised by DGBDZB</li>
+                        <p class="titillium-web-semibold">ZDNGZXN</p>
+
+                    </div>
+                </div>
+
+                <div class="list">
+                    <div class="list-heading">
+                        <li><span class="titillium-web-semibold">ZGN ZDNB position</span> at ZDBZDB
+                            organised by ZDBGZDB</li>
+                        <p class="titillium-web-semibold">ZBDDZD</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="skills">
+            <p class="font-medium titillium-web-semibold">Skills</p>
+            <div class="black-div"></div>
+            <div class="all-lists font-small">
+                <div class="list">
+
+                    <li><span class="titillium-web-semibold">ZSDFBZDBG</span><span> - ZDBZBD</span></li>
+
+                    <li><span class="titillium-web-semibold">ZDBDZB</span><span> - ZDBDZ</span></li>
+
+                    <li><span class="titillium-web-semibold">ZDBDZN</span><span> - dgGTNDX</span></li>
+
+                    <li><span class="titillium-web-semibold">ZDNGZ MZZD</span><span> - NDZN ZD</span></li>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="courses">
+            <p class="font-medium titillium-web-semibold">Additional Qualifications and Courses</p>
+            <div class="black-div"></div>
+            <div class="all-lists font-small">
+
+                <div class="list">
+                    <div class="list-heading titillium-web-semibold">
+                        <li>NZDNFSG</li>
+                        <p>N ZDGZXVV</p>
+                    </div>
+                    <div class="indented-list">
+                        <li>N ZG ZCD</li>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <div class="list-heading titillium-web-semibold">
+                        <li>ZNG ADBADN</li>
+                        <p>DNANZDG</p>
+                    </div>
+                    <div class="indented-list">
+                        <li>ZDGV G</li>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="black-div"></div>
+
+
+        <!-- <div class="">
+            <p class="font-medium titillium-web-semibold">Position of Responsibility</p>
+            <div class="black-div"></div>
+            <div class="all-lists font-small">
+                <div class="list ">
+                    <div class="list-heading titillium-web-semibold">
+                        <li>Vocalist at Anhad, KMV</li>
+                        <p>1 Year</p>
+                    </div>
+                    <div class="indented-list">
+                        <li>Learned coordination in group</li>
+                        <li>Overcame fear of showing my skill</li>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
     </div>
     <script>
-        Handlebars.registerHelper('renderLinks', (links) => {
 
-        });
     </script>
 </body>
 
 </html>
+
+<!-- dummy input -->
+<!-- {
+  personalDetails: [
+    {
+      name: 'Aman Singh',
+      email: 'amanforwork1@gmail.com',
+      phone: '09717599515',
+      address: 'B -475 b Patel Nagar 2nd',
+      dob: '2024-06-13',
+      about: 'bkuhajsav bjhv svhjbasnvuasio vjasvo asjvn asiuv asvkasn vasijon nascknc ashrb cascr asjrc nnaslmcnas efsauf skanc asjcnA UCEAS ',
+      linktree: 'DFVZSDV SDDSV'
+    }
+  ],
+  achievements: [
+    {
+      name: 'ZN GZN ZZ',
+      event: 'GNZ',
+      organiser: 'ZNZDGNDGN',
+      year: 'BGFNNGD'
+    },
+    {
+      name: ' BSDD GS',
+      event: 'DZHBD',
+      organiser: 'DGBDZB',
+      year: 'ZDNGZXN'
+    },
+    {
+      name: 'ZGN ZDNB',
+      event: 'ZDBZDB',
+      organiser: 'ZDBGZDB',
+      year: 'ZBDDZD'
+    }
+  ],
+  edu: [
+    {
+      course: 'GBSDRGBSZD',
+      institution: 'ZGVDSZGVZ',
+      year: 'ZB',
+      marks: 'F'
+    },
+    {
+      course: 'ZDBGGZBG',
+      institution: 'ZDFZ',
+      year: 'ZGB',
+      marks: 'RZGB'
+    },
+    {
+      course: 'ZDZBGZBGGBV',
+      institution: 'DFBGDTJN',
+      year: 'YF,MU,',
+      marks: 'JMD'
+    }
+  ],
+  skill: [
+    { skill: 'ZSDFBZDBG', level: 'ZDBZBD' },
+    { skill: 'ZDBDZB', level: 'ZDBDZ' },
+    { skill: 'ZDBDZN', level: 'dgGTNDX' },
+    { skill: 'ZDNGZ MZZD', level: 'NDZN ZD' }
+  ],
+  projects: [
+    {
+      company: 'DGNZ BZ',
+      position: 'DZGN ZG',
+      start: 'DGN ',
+      end: 'ZGN DZ',
+      exp: 'N DZ'
+    },
+    {
+      company: 'DNGDZNG',
+      position: 'DZN ZDN',
+      start: 'DZN ZD',
+      end: 'N Z',
+      exp: 'DNG ZDG'
+    }
+  ],
+  work: [
+    {
+      company: 'DGNZNZ',
+      position: 'ZDGNGZDN',
+      start: 'ZDN ',
+      end: 'ZDNG ZD',
+      exp: 'GZDN GDZ'
+    }
+  ],
+  course: [
+    { course: 'NZDNFSG', duration: 'N ZDGZXVV', exp: 'N ZG ZCD' },
+    { course: 'ZNG ADBADN', duration: 'DNANZDG', exp: 'ZDGV G' }
+  ]
+} -->

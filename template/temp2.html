@@ -5,376 +5,368 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: var(--font-primary);
         }
 
         :root {
-            --primary-color: #494747;
-            --secondary-color: #040404;
-            --font-primary: sans-serif;
-            --font-large: 2.5rem;
-            --font-medium: 1.25rem;
-            --font-small: 0.85rem;
-            --font-bold: 700;
-            --font-light: lighter;
+            --font-large-tempTwo: 2rem;
+            --font-medium-tempTwo: 1.25rem;
+            --font-small-tempTwo: 0.9rem;
+            --font-mid-small-tempTwo: 0.8rem;
+            --font-mid-bold-tempTwo: 500;
+            --font-bold-tempTwo: 600;
+            --font-ex-bold-tempTwo: 700;
+            --font-primary: "Titillium Web", sans-serif;
+            --color-primary-tempTwo: #00807e;
+            --color-secondary-tempTwo: #f5f5f5;
         }
 
         /* utilities */
-        .font-large {
-            font-size: var(--font-large);
+        .font-large-tempTwo {
+            font-size: var(--font-large-tempTwo);
+        }
+
+        .font-medium-tempTwo {
+            font-size: var(--font-medium-tempTwo);
+        }
+
+        .font-small-tempTwo {
+            font-size: var(--font-small-tempTwo);
+        }
+
+        .font-mid-small-tempTwo {
+            font-size: var(--font-mid-small-tempTwo);
+        }
+
+        .font-ex-small-tempTwo {
+            font-size: var(--font-ex-small-tempTwo);
+        }
+
+        .font-bold-tempTwo {
+            font-weight: var(--font-bold-tempTwo);
+        }
+
+        .font-light-tempTwo {
+            font-weight: var(--font-light-tempTwo);
+        }
+
+        .color-primary-tempTwo {
+            color: var(--color-primary-tempTwo);
+        }
+
+        .color-secondary-tempTwo {
+            color: var(--color-secondary-tempTwo);
         }
 
 
-        .font-medium {
-            font-size: var(--font-medium);
-        }
-
-        .font-small {
-            font-size: var(--font-small);
-        }
-
-        .font-bold {
-            font-weight: var(--font-bold);
-        }
-
-        .font-light {
-            font-weight: var(--font-light);
-        }
-
-        .black-div {
-            height: 1px;
-            background-color: black;
-            width: auto;
-        }
-
-
-        body {
-            display: flex;
-            justify-content: space-between;
-            font-family: var(--font-primary);
-            height: 1050px;
-        }
-
-        body::before {
-            content: "";
-            position: absolute;
-            top: 26px;
-            left: 0;
-            height: 10rem;
-            width: 100vw;
-            z-index: -1;
-            opacity: 0.5;
-            background-color: lightpink;
-        }
-
-        .white-div {
-            background-color: white;
-            height: 2px;
-            width: 100%;
-        }
-
-        .container {
-            display: flex;
-            width: 100vw;
-        }
-
-        .div1 {
+        .cont-tempTwo {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--primary-color);
-            color: white;
-            width: 13rem;
-            padding: 1rem;
-            margin: 0 0 0 40px;
-            gap: 10px;
         }
 
-        .div2 {
-            padding: 0 2rem;
+        .box-tempTwo {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 0;
+        }
+
+        .box-item-tempTwo {
+            padding: 1px 0;
+        }
+
+        /* named like this as this div comes at the top of a box */
+        .box-top-tempTwo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .heading-tempTwo {
+            color: var(--color-primary-tempTwo);
+            font-family: serif;
+        }
+
+        .line-div-tempTwo {
+            height: 1px;
+            background-color: var(--color-primary-tempTwo);
+        }
+
+
+        .name-tempTwo {
+            margin: 20px 20px 10px 20px;
+            color: var(--color-primary-tempTwo);
+            font-size: var(--font-large-tempTwo);
+        }
+
+        .big-line-tempTwo {
+            height: 10px;
+            background-color: var(--color-primary-tempTwo);
+            /* margin: 10px 0; */
+            width: 98vw;
+        }
+
+        .details-section-tempTwo {
+            display: flex;
+            margin: 10px 20px;
+            gap: 20px;
+        }
+
+        .left-section-tempTwo {
             display: flex;
             flex-direction: column;
             width: 70vw;
-            gap: 1rem;
+
         }
 
-        .name {
-            padding: 5rem 0;
-            font-family: sans-serif;
-        }
-
-        .about {
+        .right-section-tempTwo {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            background-color: var(--color-secondary-tempTwo);
+            width: 25vw;
+            padding: 0 15px;
+            gap: 5px;
         }
 
-        .skills {
+        .contact-item-tempTwo {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-content: center;
-            height: 250px;
-            align-self: flex-start;
-            width: 100%;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .skill-item {
-            display: flex;
-            border-radius: 5px;
-            justify-content: space-between;
-        }
-
-        .education-section {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            height: 250px;
-        }
-
-        .education {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .education-list {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
-        }
-
-        .education-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .qualifications {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            height: 250px;
-            justify-content: center;
-        }
-
-        .qualification-list {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .qualification-item {
-            border-radius: 5px;
-        }
-
-        .contacts {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            height: 250px;
-            justify-content: center;
-        }
-
-        .contact-list {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            border-radius: 5px;
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            overflow: hidden;
-            border-radius: 50%;
-        }
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .work-history {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-top: 1rem;
-        }
-
-        .work-item {
-            border-radius: 5px;
+            gap: 5px;
+            padding: 5px 5px 5px 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="div1">
-            <div class="profile-photo">
-                <img src="https://assetsio.reedpopcdn.com/amspm-poster-cropped.jpg?width=1200&height=630&fit=crop&enable=upscale&auto=webp"
-                    alt="Profile Photo">
-            </div>
-            <div class="white-div"></div>
-            <div class="contacts">
-                <p class="font-medium font-bold">Contact</p>
-                <div class="contact-list">
-                    <div class="contact-item">
-                        <p class="font-small">{{email}}</p>
-                    </div>
-                    <div class="contact-item">
-                        <p class="font-small">{{phone}}</p>
-                    </div>
-                    <div class="contact-item">
-                        <p class="font-small">{{address}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="white-div"></div>
-
-            <div class="skills">
-                <p class="font-medium font-bold">Skills</p>
-                <div class="skill-list">
-                    {{#each skill}}
-                    <div class="skill-item">
-                        <p class="font-small">{{this.skill}}</p>
-                        <p class="font-small">{{this.level}} </p>
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-            <div class="white-div"></div>
-            <div class="qualifications">
-                <p class="font-medium font-bold">Achievements</p>
-                <div class="qualification-list">
-                    {{#each achievements}}
-                    <div class="qualification-item">
-                        <p class="font-small">
-                            {{this.name}}-{{this.event}}
-                        </p>
-                    </div>
-                    {{/each}}
-            </div>
-
-        </div>
-        <div class="div2">
-            <div class="font-large name">
-                <p>{{name}}</p>
-            </div>
-            <div class="about">
-                <p class="font-medium font-bold">About me</p>
-                <p> {{about}} </p>
-            </div>
-            <div class="black-div"></div>
-            <div class="work-history">
-                <h2>Work History</h2>
-                <div class="work-item">
-                    <!-- <h3></h3>
-                            <p></p>
-                            <p></p> -->
-                    <p>Worked as CEO at Google</p>
-                </div>
-                <div class="work-item">
-                    <!-- <h3></h3>
-                            <p></p>
-                            <p></p> -->
-                    <p>Owner of Microsoft </p>
-                </div>
-                <div class="work-item">
-                    <!-- <h3></h3>
-                            <p></p>
-                            <p></p> -->
-                    <p></p>
-                </div>
-
-            </div>
-            <div class="black-div"></div>
-            <div class="education-section">
-                <h2>Education</h2>
-                <div class="education">
-                    <div class="education-list font-bold">
-                        <div class="education-item">
-                            <p class="font-small">Course / Examination</p>
+    <div class="main-container-tempTwo">
+        <div class="name-tempTwo font-bold-tempTwo">Aman Singh</div>
+        <div class="big-line-tempTwo"></div>
+        <div class="details-section-tempTwo">
+            <div class="left-section-tempTwo">
+                <div class="education-section-tempTwo cont-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">Education</div>
+                    <div class="line-div-tempTwo"></div>
+                    <div class="edu-tempTwo box-tempTwo">
+                        <div class="degree-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="degree-tempTwo font-bold-tempTwo">B.Tech</div>
+                            <div class="year-tempTwo">2018-2022</div>
                         </div>
-                        <div class="education-item">
-                            <p class="font-small">Institution</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">Year of passing</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">Performance</p>
-                        </div>
+                        <div class="institution-tempTwo box-item-tempTwo font-bold-tempTwo">IIT Delhi</div>
+                        <div class="grades-tempTwo box-item-tempTwo">80%</div>
 
                     </div>
-                    <div class="education-list ">
-                        <div class="education-item">
-                            <p class="font-small">Class 10th</p>
+                    <div class="edu-tempTwo box-tempTwo">
+                        <div class="degree-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="degree-tempTwo font-bold-tempTwo">B.Tech</div>
+                            <div class="year-tempTwo">2018-2022</div>
                         </div>
-                        <div class="education-item">
-                            <p class="font-small">Ch. Chhabil Dass Public School</p>
+                        <div class="institution-tempTwo box-item-tempTwo font-bold-tempTwo">IIT Delhi</div>
+                        <div class="grades-tempTwo box-item-tempTwo">80%</div>
+
+                    </div>
+                    <div class="edu-tempTwo box-tempTwo">
+                        <div class="degree-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="degree-tempTwo font-bold-tempTwo">B.Tech</div>
+                            <div class="year-tempTwo">2018-2022</div>
                         </div>
-                        <div class="education-item">
-                            <p class="font-small">2021</p>
+                        <div class="institution-tempTwo box-item-tempTwo font-bold-tempTwo">IIT Delhi</div>
+                        <div class="grades-tempTwo box-item-tempTwo">80%</div>
+
+                    </div>
+                </div>
+                <div class="work-section-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">Work Experience</div>
+                    <div class="line-div-tempTwo"></div>
+                    <div class="work-tempTwo box-tempTwo">
+                        <div class="work-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="work-tempTwo font-bold-tempTwo">Software Developer, Microsoft</div>
+                            <div class="year-tempTwo">2018-2022</div>
                         </div>
-                        <div class="education-item">
-                            <p class="font-small">96%</p>
+                        <div class="box-tempTwo list-tempTwo font-small-tempTwo">
+                            <li class="experience-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                            <li class="experience-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
                         </div>
                     </div>
-                    <div class="education-list ">
-                        <div class="education-item">
-                            <p class="font-small">Class 10th</p>
+                    <div class="work-tempTwo box-tempTwo">
+                        <div class="work-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="work-tempTwo font-bold-tempTwo">Software Developer</div>
+                            <div class="year-tempTwo">2018-2022</div>
                         </div>
-                        <div class="education-item">
-                            <p class="font-small">Ch. Chhabil Dass Public School</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">2021</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">96%</p>
-                        </div>
-                    </div>
-                    <div class="education-list ">
-                        <div class="education-item">
-                            <p class="font-small">Class 10th</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">Ch. Chhabil Dass Public School</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">2021</p>
-                        </div>
-                        <div class="education-item">
-                            <p class="font-small">96%</p>
+                        <div class="company-tempTwo box-item-tempTwo font-bold-tempTwo">Microsoft</div>
+                        <div class="box-tempTwo list-tempTwo font-small-tempTwo">
+                            <li class="experience-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                            <li class="experience-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
                         </div>
                     </div>
                 </div>
-
+                <div class="projects-section-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">Projects / Internships</div>
+                    <div class="line-div-tempTwo"></div>
+                    <div class="projects-tempTwo box-tempTwo">
+                        <div class="projects-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="projects-tempTwo font-bold-tempTwo">Perfect Resume</div>
+                            <div class="year-tempTwo">2018-2022</div>
+                        </div>
+                        <div class="box-tempTwo list-tempTwo font-small-tempTwo">
+                            <li class="projects-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                            <li class="projects-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                        </div>
+                    </div>
+                    <div class="projects-tempTwo box-tempTwo">
+                        <div class="projects-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="projects-tempTwo font-bold-tempTwo">Perfect Resume</div>
+                            <div class="year-tempTwo">2018-2022</div>
+                        </div>
+                        <div class="box-tempTwo list-tempTwo font-small-tempTwo">
+                            <li class="projects-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                            <li class="projects-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-section-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">Projects / Internships</div>
+                    <div class="line-div-tempTwo"></div>
+                    <div class="projects-tempTwo box-tempTwo">
+                        <div class="projects-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="projects-tempTwo font-bold-tempTwo">Perfect Resume</div>
+                            <div class="year-tempTwo">2018-2022</div>
+                        </div>
+                        <div class="box-tempTwo list-tempTwo font-small-tempTwo">
+                            <li class="projects-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                            <li class="projects-tempTwo"> Collected and analyzed data from over 195+ countries through
+                                budget
+                                reviews and specific ministry reports</li>
+                        </div>
+                    </div>
+                </div>
             </div>
-
+            <div class="right-section-tempTwo font-mid-small-tempTwo">
+                <div class="contacts-section-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">Contact</div>
+                    <div class="line-div-tempTwo"></div>
+                    <div class="contacts-tempTwo box-tempTwo">
+                        <div class="contact-item-tempTwo">
+                            <span class="material-symbols-outlined">
+                                call
+                            </span>
+                            <span>9717599515</span>
+                        </div>
+                        <div class="contact-item-tempTwo">
+                            <span class="material-symbols-outlined">
+                                mail
+                            </span>
+                            <a href="mailto{{email}}">amanforwork1@gmail.com</a>
+                        </div>
+                        <div class="contact-item-tempTwo">
+                            <span class="material-symbols-outlined">
+                                link
+                            </span>
+                            <a href="link">Linktree</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-section-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">About</div>
+                    <div class="line-div-tempTwo"></div>
+                    <p>Passionate developer with a strong foundation in JavaScript (React, Redux), HTML, CSS, and more.
+                        I'm a fast learner who thrives
+                        on challenges and enjoys staying ahead of the curve by exploring the latest tech trends. In my
+                        free time, I build personal projects
+                        to further hone my skills and bring innovative ideas to life.
+                    </p>
+                </div>
+                <div class="skills-section-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">Skills</div>
+                    <div class="line-div-tempTwo"></div>
+                    <div class="skills-tempTwo box-top-tempTwo">
+                        <div class="skill-item-tempTwo">JavaScript</div>
+                        <div class="skill-item-tempTwo">Intermediate</div>
+                    </div>
+                    <div class="skills-tempTwo box-top-tempTwo">
+                        <div class="skill-item-tempTwo">Blockchain</div>
+                        <div class="skill-item-tempTwo">Beginner</div>
+                    </div>
+                    <div class="skills-tempTwo box-top-tempTwo">
+                        <div class="skill-item-tempTwo">ReactJs</div>
+                        <div class="skill-item-tempTwo">Intermediate</div>
+                    </div>
+                    <div class="skills-tempTwo box-top-tempTwo">
+                        <div class="skill-item-tempTwo">ExpressJs</div>
+                        <div class="skill-item-tempTwo">Intermediate</div>
+                    </div>
+                    <div class="skills-tempTwo box-top-tempTwo">
+                        <div class="skill-item-tempTwo">JavaScript</div>
+                        <div class="skill-item-tempTwo">Intermediate</div>
+                    </div>
+                    <div class="skills-tempTwo box-top-tempTwo">
+                        <div class="skill-item-tempTwo">JavaScript</div>
+                        <div class="skill-item-tempTwo">Intermediate</div>
+                    </div>
+                </div>
+                <div class="achievements-section-tempTwo">
+                    <div class="heading-tempTwo font-medium-tempTwo font-bold-tempTwo">Achievements</div>
+                    <div class="line-div-tempTwo"></div>
+                    <div class="achievements-tempTwo box-tempTwo">
+                        <div class="achievements-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="achievements-tempTwo font-bold-tempTwo">Group Singing Competition</div>
+                        </div>
+                        <div class="box-tempTwo list-tempTwo">
+                            <li class="achievements-tempTwo"><span class="font-bold-tempTwo">1st position </span> in
+                                Group Singing Competition at Kalindi
+                                College in 2018</li>
+                            <li class="achievements-tempTwo"> Collected and analyzed data from over 195+ countries
+                                through
+                                budget
+                                reviews and specific ministry reports</li>
+                        </div>
+                    </div>
+                    <div class="achievements-tempTwo box-tempTwo">
+                        <div class="achievements-year-tempTwo box-top-tempTwo box-item-tempTwo">
+                            <div class="achievements-tempTwo font-bold-tempTwo">Hackathon Winner</div>
+                            <div class="year-tempTwo">2018-2022</div>
+                        </div>
+                        <div class="box-tempTwo list-tempTwo">
+                            <li class="achievements-tempTwo"> Collected and analyzed data from over 195+ countries
+                                through
+                                budget
+                                reviews and specific ministry reports</li>
+                            <li class="achievements-tempTwo"> Collected and analyzed data from over 195+ countries
+                                through
+                                budget
+                                reviews and specific ministry reports</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>
