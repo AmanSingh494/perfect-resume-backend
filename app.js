@@ -57,7 +57,7 @@ app.post('/submit', async (req, res) => {
       personalDetails
 
     // html template
-    const template = createTemplate(templateName, {
+    const template = createTemplate("temp1", {
       name,
       email,
       phone,
